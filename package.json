@@ -29,6 +29,6 @@
   "homepage": "https://github.com/ULL-MII-SYTWS/asyncmap-solution#readme",
   "dependencies": {
     "async": "^3.2.4",
-    "commander": "^6.2.0"
+    "commander": "^6.2.1"
   }
 }
