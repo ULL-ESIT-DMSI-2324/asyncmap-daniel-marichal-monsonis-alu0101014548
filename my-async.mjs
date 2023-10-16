@@ -29,7 +29,7 @@ let asyncMap = function(inputs, fun, callback) {
 
   inputs.forEach((input, index) => {
       fun(input, (err, result) => {
-          if (hasErrors) return;
+          //if (hasErrors) return;
 
           if (err) {
               hasErrors = true;
