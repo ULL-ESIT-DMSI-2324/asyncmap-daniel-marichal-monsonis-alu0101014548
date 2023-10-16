@@ -9,8 +9,8 @@ program.parse(process.argv);
 
 /**
  * Lee archivos en serie y pasa los resultados al callback.
- * @param {string[]} inputs - Lista de archivos a leer.
- * @param {Function} fun - Función de lectura (debería ser `fs.readFile` en este caso).
+ * @param {any[]} inputs - Lista de items sobre los que realizar la tarea asíncrona.
+ * @param {Function} fun - Función asíncrona (debería ser `fs.readFile` en este caso).
  * @param {Function} callback - Callback para manejar el resultado.
  */
 const series = function(inputs, fun, callback) {
