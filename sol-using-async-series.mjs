@@ -18,10 +18,16 @@ program.on('--help', () => {
 program.parse(process.argv)
 if (!program.files || program.files.length === 0) program.help();
 
-let readers = program.files.map(
-    // fill it with your code
-);
+let readers = program.files.map(file => {
+  return function(callback) {
+      fs.readFile(file, 'utf8', callback);
+  };
+});
 
 series(readers, function (err, results) {
-  /* Fill the code */
+  if (err) {
+    console.error('Error reading files:', err);
+    return;
+  }
+  console.log('Concatenated content of files read in series:\n', results.join('\n'));
 })
